@@ -1,45 +1,67 @@
 <!DOCTYPE html>  
-<html lang="es">  
+<html>  
 <head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Introducción a la Programación</title>  
     <style>  
         body {  
-            font-family: Arial, sans-serif;  
             margin: 0;  
-            padding: 20px;  
+            padding: 0;  
+            font-family: Arial, sans-serif;  
+            line-height: 1.6;  
+            color: #333;  
             background-color: #e0f7fa;  
+            background-image: linear-gradient(to bottom right, #e0f7fa, #80deea);   
+            min-height: 100vh;  
         }  
+
         h1 {  
             text-align: center;  
-            color: #333;  
-            background-color: #ffffff; 
-            padding: 10px;  
+            color: #1565c0;  
+            padding: 20px 0;  
+            margin-bottom: 20px;  
+            border-bottom: 3px solid #81d4fa;   
+            background-color: rgba(255, 255, 255, 0.8);  
             border-radius: 10px;  
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
         }  
+
         .imagenes {  
             display: flex;  
             justify-content: center;  
-            flex-wrap: wrap;  
-            margin-bottom: 20px;  
-        }  
-        .imagenes img {  
-            max-width: 30%; 
-            height: auto;  
-            margin: 10px;  
+            gap: 20px;  
+            margin: 20px 0;  
+            padding: 20px;  
+            background-color: rgba(255, 255, 255, 0.9);  
             border-radius: 10px;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
         }  
+
+        .imagenes img {  
+            width: 300px;  
+            height: auto;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+            transition: transform 0.2s ease, box-shadow 0.2s ease;  
+        }  
+
+        .imagenes img:hover {  
+            transform: scale(1.05);  
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
+        }  
+
         p {  
-            line-height: 1.6;  
-            color: #555;  
+            max-width: 800px;  
+            margin: 20px auto;  
+            padding: 20px;  
             text-align: justify;  
+            background-color: rgba(255, 255, 255, 0.8);  
+            border-radius: 10px;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
         }  
+
         .button {  
-            display: block;  
-            width: 100%;  
-            padding: 15px;  
+            display: inline-block;  
+            padding: 10px 20px;  
             margin: 10px 0;  
             background: #1565c0;  
             color: #fff;  
@@ -48,14 +70,15 @@
             border-radius: 5px;  
             transition: background-color 0.3s ease;  
             font-weight: bold;  
-            font-size: 18px;  
         }  
+
         .button:hover {  
             background: #0d47a1;  
         }  
+
         footer {  
-            background-color: #333;  
-            color: white;  
+            background: #292b2c;  
+            color: #fff;  
             padding: 10px;  
             text-align: center;  
             clear: both;  
@@ -69,7 +92,7 @@
     <h1>Introducción a la Programación</h1>  
     <div class="imagenes">  
         <img src="Imagenes/AdobeStock_132920830-1-scaled.jpg" alt="Imagen 1">  
-        <img src="Imagenes/OIP.jpg" alt="Imagen 2">  
+        <img src="Imagenes/OIP.jpg" alt="Imagen 2"> 
         <img src="Imagenes/wsedrfvgbhnj.jpg" alt="Imagen 3">  
     </div>  
     <p>Cuando existe la necesidad de resolver de forma automatizada tareas que requieren de mucho análisis y múltiples procesos, por lo general existen aplicaciones o programas que son muy útiles para simplificar el trabajo; sin embargo, existen casos en que los programas de aplicación actuales no son suficientes para cubrir todas las necesidades. En el momento que se llega a este extremo, se hace necesaria la técnica de programación, que consiste en el diseño paso a paso de una aplicación o un grupo de programas que logren satisfacer todas las necesidades de una función o procesos determinados.</p>  
@@ -80,7 +103,7 @@
     <p><a class="button" href="java.html">Java</a></p>  
     <p><a class="button" href="csharp.html">C Sharp</a></p>  
     <footer>  
-        Todos los Derechos Reservados The Melvis Presley C.A  
+        Todos los Derechos Reservados The Melvis Presley C.A   
     </footer>  
 </body>  
 </html>
