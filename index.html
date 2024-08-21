@@ -5,36 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Introducción a la Programación</title>  
     <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-            background-color: #e0f7fa;  
-            margin: 0;  
-            padding: 20px;  
+        * {  
+            box-sizing: border-box;  
         }  
-
+        body {  
+            background-color: #e0f7fa;  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+        }  
         h1 {  
             text-align: center;  
-            color: #00796b;  
+            color: #1565c0;  
         }  
-
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 20px;  
+        }  
         .imagenes {  
             display: flex;  
             justify-content: center;  
-          margin: 20px 0;  
+            flex-wrap: wrap;  
+            margin: 20px 0;  
         }  
-
         .imagenes img {  
             max-width: 100%;  
             height: auto;  
             margin: 0 10px;  
             transition: transform 0.2s ease, box-shadow 0.2s ease;  
         }  
-
         .imagenes img:hover {  
             transform: scale(1.05);  
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
         }  
-
         p {  
             max-width: 800px;  
             margin: 20px auto;  
@@ -44,12 +48,11 @@
             border-radius: 10px;  
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
         }  
-
         .button {  
             display: block;  
-            width: 80%; /* Aumentado para que el botón sea más grande */  
-            padding: 20px; /* Aumentado para hacer el botón más grande */  
-            margin: 20px auto; /* Centrado */  
+            width: 80%;  
+            padding: 20px;  
+            margin: 20px auto;  
             background: #1565c0;  
             color: #fff;  
             text-align: center;  
@@ -57,19 +60,17 @@
             border-radius: 5px;  
             transition: background-color 0.3s ease;  
             font-weight: bold;  
-            font-size: 24px; /* Aumentado para mayor legibilidad */  
+            font-size: 24px;  
         }  
-
         .button:hover {  
             background: #0d47a1;  
         }  
-
         footer {  
             background: #292b2c;  
             color: #fff;  
             padding: 10px;  
             text-align: center;  
-      clear: both;  
+            clear: both;  
             margin-top: 20px;  
             border-radius: 0 0 10px 10px;  
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);  
@@ -77,19 +78,21 @@
     </style>  
 </head>  
 <body>  
-    <h1>Introducción a la Programación</h1>  
-    <div class="imagenes">  
-        <img src="Imagenes/AdobeStock_132920830-1-scaled.jpg" alt="Imagen 1">  
-        <img src="Imagenes/OIP.jpg" alt="Imagen 2">  
-        <img src="Imagenes/wsedrfvgbhnj.jpg" alt="Imagen 3">  
+    <div class="container">  
+        <h1>Introducción a la Programación</h1>  
+        <div class="imagenes">  
+            <img src="Imagenes/AdobeStock_132920830-1-scaled.jpg" alt="Imagen 1">  
+            <img src="Imagenes/OIP.jpg" alt="Imagen 2">  
+            <img src="Imagenes/wsedrfvgbhnj.jpg" alt="Imagen 3">  
+        </div>  
+        <p>Cuando existe la necesidad de resolver de forma automatizada tareas que requieren de mucho análisis y múltiples procesos, por lo general existen aplicaciones o programas que son muy útiles para simplificar el trabajo; sin embargo, existen casos en que los programas de aplicación actuales no son suficientes para cubrir todas las necesidades. En el momento que se llega a este extremo, se hace necesaria la técnica de programación, que consiste en el diseño paso a paso de una aplicación o un grupo de programas que logren satisfacer todas las necesidades de una función o procesos determinados.</p>  
+        <p>El objetivo central de la programación es la creación de aplicaciones, programas o software que sean de utilidad humana y generen la facilidad de realizar ciertas acciones cubriendo siempre una necesidad.</p>  
+        <p>Un lenguaje de programación de alto nivel se caracteriza por expresar el algoritmo de una manera adecuada a la capacidad cognitiva humana.</p>  
+        <p>A continuación se muestran algunos lenguajes de alto nivel:</p>  
+        <p><a class="button" href="visual.html">Visual Basic.Net</a></p>  
+        <p><a class="button" href="java.html">Java</a></p>  
+        <p><a class="button" href="csharp.html">C Sharp</a></p>  
     </div>  
-    <p>Cuando existe la necesidad de resolver de forma automatizada tareas que requieren de mucho análisis y múltiples procesos, por lo general existen aplicaciones o programas que son muy útiles para simplificar el trabajo; sin embargo, existen casos en que los programas de aplicación actuales no son suficientes para cubrir todas las necesidades. En el momento que se llega a este extremo, se hace necesaria la técnica de programación, que consiste en el diseño paso a paso de una aplicación o un grupo de programas que logren satisfacer todas las necesidades de una función o procesos determinados.</p>  
-    <p>El objetivo central de la programación es la creación de aplicaciones, programas o software que sean de utilidad humana y generen la facilidad de realizar ciertas acciones cubriendo siempre una necesidad.</p>  
-    <p>Un lenguaje de programación de alto nivel se caracteriza por expresar el algoritmo de una manera adecuada a la capacidad cognitiva humana.</p>  
-    <p>A continuación se muestran algunos lenguajes de alto nivel:</p>  
-    <p><a class="button" href="visual.html">Visual Basic.Net</a></p>  
-    <p><a class="button" href="java.html">Java</a></p>  
-    <p><a class="button" href="csharp.html">C Sharp</a></p>  
     <footer>  
         Todos los Derechos Reservados The Melvis Presley C.A  
     </footer>  
