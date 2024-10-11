@@ -140,20 +140,24 @@ hr {
     height: 2px;
     background-color: #46a2da;
     margin: 40px 0;
-}
-
 video {
     width: 100%;
-    height: auto;
-    max-height: 100vh; 
-    object-fit: contain; 
+    max-width: 800px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
 }
-
-.video-section {
-    position: relative;
-    height: 100vh; 
-    overflow: hidden;
-    margin-bottom: 20px;
+@media only screen and (max-width: 600px) {
+    video {
+        width: 100%; 
+        height: auto; 
+        max-width: 100%; 
+    }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
         #scroll-video {
             position: absolute;
