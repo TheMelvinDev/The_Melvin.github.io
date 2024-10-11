@@ -66,6 +66,7 @@
 </footer>
 
   <style>
+   <style>
    body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f4f7fa;
@@ -148,19 +149,28 @@ hr {
     margin: 40px 0;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 video {
     width: 100%;
     max-width: 800px;
     height: auto;
     display: block;
     margin: 0 auto;
+    object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
     video {
-        width: 100%;
-        height: auto;
         max-width: 100%;
+        object-fit: contain;
     }
 
     .container {
@@ -169,22 +179,6 @@ video {
         align-items: center;
         padding: 10px;
     }
-}
-
-.video-section {
-    position: relative;
-    height: 60vh;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-#scroll-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .image-gallery {
@@ -314,7 +308,8 @@ footer {
 
 @keyframes zoom {
     from { transform: scale(0); }
-    to { transform: scale(1); 
+    to { transform: scale(1); }
+
     </style>
 
 <script>
