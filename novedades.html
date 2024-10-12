@@ -261,7 +261,10 @@
         var modalImg = document.getElementById("imgModal");
         var images = document.querySelectorAll('.image-gallery img');
         var span = document.getElementsByClassName("close")[0];
-
+	
+        window.onload = function() {
+            modal.style.display = "none";
+        };
         images.forEach(function(img) {
             img.onclick = function() {
                 modal.style.display = "flex";
