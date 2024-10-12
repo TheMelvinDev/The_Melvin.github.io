@@ -12,11 +12,13 @@
 <h1>Novedades</h1>
 <p class="intro-text"><strong>Esta página está dedicada a mostrar las diversas actividades culturales, sociales y educativas que se llevan a cabo dentro de nuestra institución. Aquí, los usuarios podrán informarse sobre eventos, talleres, celebraciones y proyectos que fomentan el desarrollo integral de nuestra comunidad. Además, ofrecemos un espacio para compartir logros y experiencias que refuercen la interacción y participación activa entre estudiantes, docentes y la comunidad en general, como miembros de la institución.</strong></p>
 <hr>
-<div class="video-section">
+<div class="video-container">
+    <img src="Imágenes/bandera-honduras.png" alt="Bandera de Honduras" class="flag">
     <video id="scroll-video" controls playsinline>
-    <source src="Imágenes/entrada-colegio.mp4" type="video/mp4">
-    Tu navegador no soporta el elemento de video.
+        <source src="Imágenes/entrada-colegio.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
     </video>
+</div>
 <div class="activities">
 <h1>Actividades que se realizan en el Instituto Polivalente Honduras</h1>
 <hr>
@@ -168,6 +170,31 @@
             overflow: hidden;
             margin-bottom: 20px;
         }
+        .video-container {
+    position: relative;
+    display: inline-block;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 5px solid #2980b9; 
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-container .flag {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: auto;
+    z-index: 1; 
+}
 
         video {
             width: 100%;
