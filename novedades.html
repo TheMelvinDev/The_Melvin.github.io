@@ -13,14 +13,10 @@
 <p class="intro-text"><strong>Esta página está dedicada a mostrar las diversas actividades culturales, sociales y educativas que se llevan a cabo dentro de nuestra institución. Aquí, los usuarios podrán informarse sobre eventos, talleres, celebraciones y proyectos que fomentan el desarrollo integral de nuestra comunidad. Además, ofrecemos un espacio para compartir logros y experiencias que refuercen la interacción y participación activa entre estudiantes, docentes y la comunidad en general, como miembros de la institución.</strong></p>
 <hr>
 <div class="video-section">
-        <div class="video-container">
-            <video id="scroll-video" controls playsinline>
-                <source src="Imágenes/entrada-colegio.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    </div>
-	
+    <video id="scroll-video" controls playsinline>
+    <source src="Imágenes/entrada-colegio.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+    </video>
 <div class="activities">
 <h1>Actividades que se realizan en el Instituto Polivalente Honduras</h1>
 <hr>
@@ -152,10 +148,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 60vh;
+            overflow: hidden;
             margin-bottom: 20px;
-            position: relative;
-            border: 10px solid #0033A0; 
-            background-color: white;
         }
 
         video {
@@ -165,6 +160,20 @@
             display: block;
             margin: 0 auto;
             object-fit: cover;
+        }
+
+        @media only screen and (max-width: 600px) {
+            video {
+                max-width: 100%;
+                object-fit: contain;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
         }
 
         .image-gallery {
@@ -200,31 +209,28 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
         }
 
         .modal-content {
             margin: auto;
             display: block;
             width: 80%;
-            max-width: 900px; 
-            animation: zoom 0.6s; 
+            max-width: 700px;
+            animation: zoom 0.6s;
         }
 
         .close {
             position: absolute;
-            top: 20px;
-            right: 40px; 
+            top: 15px;
+            right: 35px;
             color: #fff;
-            font-size: 50px; 
+            font-size: 40px;
             font-weight: bold;
             cursor: pointer;
         }
 
         .close:hover {
-            color: #bbb; 
+            color: #bbb;
         }
 
         footer {
@@ -233,6 +239,51 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .activities {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-text, .activities {
+                padding: 20px;
+            }
+
+            .image-gallery img {
+                width: 200px;
+                height: 200px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .activities {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .intro-text {
+                font-size: 1rem;
+            }
+
+            .button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .image-gallery img {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         @keyframes fadeIn {
@@ -261,13 +312,10 @@
         var modalImg = document.getElementById("imgModal");
         var images = document.querySelectorAll('.image-gallery img');
         var span = document.getElementsByClassName("close")[0];
-	
-        window.onload = function() {
-            modal.style.display = "none";
-        };
+
         images.forEach(function(img) {
             img.onclick = function() {
-                modal.style.display = "flex";
+                modal.style.display = "block";
                 modalImg.src = this.src;
             }
         });
@@ -281,7 +329,6 @@
                 modal.style.display = "none";
             }
         }
-    </script>
 </script>
 </body>
 </html>
