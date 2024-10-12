@@ -151,6 +151,46 @@
             height: 60vh;
             overflow: hidden;
             margin-bottom: 20px;
+         }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            border: 10px solid #0033A0; 
+            background-color: white;
+        }
+
+        .border-top,
+        .border-bottom {
+            background-color: #0033A0; 
+            height: 10px;
+        }
+
+        .stars {
+            background-color: white;
+            height: 20px; 
+            position: relative;
+        }
+
+        .stars:before,
+        .stars:after {
+            content: '★'; 
+            color: #0033A0;
+            position: absolute;
+            font-size: 20px;
+        }
+
+        .stars:before {
+            left: 40%;
+            top: -5px;
+        }
+
+        .stars:after {
+            right: 40%;
+            top: -5px;
         }
 
         video {
