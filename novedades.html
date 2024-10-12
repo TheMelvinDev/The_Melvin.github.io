@@ -162,41 +162,26 @@
             margin: 40px 0;
         }
         .video-container {
-            position: center;
-            display: inline-block;
-            max-width: 800px;
-	    justify-content: center;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            margin: 20px auto;
-            border: 5px solid #2980b9; 
+            height: 60vh;
+	    border: 5px solid #2980b9; 
             border-radius: 15px; 
             overflow: hidden;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 20px;
         }
 
-        .video-container video {
-            width: 100%;
-	    position: center;
-            display: block;
-        }
-
-        .flag {
-            position: center;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: auto;
-            z-index: 2;
-}
         video {
             width: 100%;
             max-width: 800px;
-            position: center;
             height: auto;
             display: block;
             margin: 0 auto;
             object-fit: cover;
+        }
         }
 
         @media only screen and (max-width: 600px) {
