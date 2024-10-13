@@ -72,22 +72,54 @@ body {
 } 
 
 .navbar {
-      background-color: #1A5A51;
-     padding: 10px 0;
-      text-align: center;
+    background-color: #0073CF;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 4px solid #FFFFFF;
+    position: relative;
+}
+
+.navbar::before,
+.navbar::after {
+       content: '★';
+    color: white;
+       font-size: 20px;
+       position: absolute;
+       top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar::before {
+    left: 10px;
+}
+
+.navbar::after {
+    right: 10px;
 }
 
 .nav-link {
-    color: white;
-      text-decoration: none;
-     margin: 20 15px;
-       background-color: #1A5276;
-       font-size: 18px;
-    transition: color 0.3s;
+      color: white;
+       text-decoration: none;
+        margin: 10px 15px;
+          padding: 10px 20px;
+    background-color: #0073CF;
+      font-size: 18px;
+        border-radius: 8px;
+       border: 2px solid #FFFFFF;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .nav-link:hover {
-    color: #74b9ff;
+    background-color: white;
+    color: #0073CF;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+          display: block;
+          margin: 10px auto;
+    }
 }
 
 .main-content {
