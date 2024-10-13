@@ -42,16 +42,19 @@
 <p>El Día de la Independencia en Honduras se celebra el 15 de septiembre. Este día conmemora la firma del Acta de Independencia en 1821, cuando Honduras, junto con otras provincias de Centroamérica, se liberó del dominio español.</p>
                          <!-- css y abimaciones by The_Melvin -->   <!-- chabela mi amor -->
 <p>Haga click en la imagen para abrir la vista previa. Imágenes cortesía de Victor Cárdenas.</p>
-<div class="image-gallery">
-            <img src="Imágenes/6.jpg" alt="Participación estudiantil">
-            <img src="Imágenes/7.jpg" alt="Talleres educativos">
-            <img src="Imágenes/8.jpg" alt="Eventos artísticos">
-        </div>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgModal">
+    <div class="modal-text" id="imgText"></div>
 </div>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgModal">
-    </div>
+
+<div class="image-gallery">
+    <img src="imagen1.jpg" alt="Imagen 1" data-text="Texto para Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2" data-text="Texto para Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3" data-text="Texto para Imagen 3">
+</div>
+
 
 </section>
 
@@ -168,69 +171,69 @@
             object-fit: contain; 
         }
 
-        .image-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se distribuyan en varias filas */
-    justify-content: center; /* Centra las imágenes en la fila */
-    gap: 10px; /* Espacio entre las imágenes */
-    padding: 0; /* Evita márgenes adicionales */
-    margin: 0 auto; /* Asegura que esté centrado */
-    max-width: 100%; /* Permite que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Controla cómo se calcula el ancho */
+       .image-gallery img {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
 }
 
-.image-gallery img {
-    flex: 1 1 calc(33.33% - 20px); /* Cada imagen ocupa un tercio del ancho */
-    max-width: calc(33.33% - 20px); /* Evita que las imágenes se desborden */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 10px; /* Bordes redondeados */
-    object-fit: cover; /* Recorta la imagen para que no se distorsione */
+/* Animación al pasar el cursor */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente la imagen */
+    opacity: 0.8; /* Reduce un poco la opacidad */
 }
 
-/* Aseguramos que las filas se mantengan igual en móviles */
-@media (max-width: 480px) {
-    .image-gallery {
-        gap: 5px; /* Reduce el espacio entre imágenes para pantallas pequeñas */
-    }
-
-    .image-gallery img {
-        flex: 1 1 calc(33.33% - 10px); /* Aseguramos que sigan 3 por fila */
-        max-width: calc(33.33% - 10px);
-    }
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
 }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            animation: zoom 0.6s;
-        }
+/* Contenido del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom 0.6s;
+    border-radius: 10px;
+}
 
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 70px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+/* Texto debajo de la imagen en el modal */
+.modal-text {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 1s ease;
+}
 
-        .close:hover {
-            color: #bbb;
-        }
+/* Botón para cerrar el modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
 
         footer {
             background-color: #2c3e50;
@@ -315,27 +318,34 @@
     </style>
 
 <script>
-      var modal = document.getElementById('myModal');
-         var modalImg = document.getElementById("imgModal");
-        var images = document.querySelectorAll('.image-gallery img');
-        var span = document.getElementsByClassName("close")[0];
+      // Variables del modal
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById('imgModal');
+var modalText = document.getElementById('imgText');
+var images = document.querySelectorAll('.image-gallery img');
+var span = document.getElementsByClassName('close')[0];
 
-        images.forEach(function(img) {
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
+// Cuando se hace clic en una imagen
+images.forEach(function(img) {
+    img.onclick = function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalText.textContent = this.getAttribute('data-text'); // Muestra el texto
+    }
+});
 
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+// Cierra el modal al hacer clic en la 'X'
+span.onclick = function() {
+    modal.style.display = 'none';
+}
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+// Cierra el modal al hacer clic fuera de la imagen
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
 </script>
 </body>
 </html>
