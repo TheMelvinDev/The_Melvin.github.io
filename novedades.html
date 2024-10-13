@@ -8,7 +8,7 @@
 
 <body>
 
-<a href="index" class="button">Volver a página de inicio</a>
+<a href="index" class="button">Volver a inicio</a>
 	
 <h1>Novedades</h1>
 <p class="intro-text"><strong>Esta página está dedicada a mostrar las diversas actividades culturales, sociales y educativas que se llevan a cabo dentro de nuestra institución. Aquí, los usuarios podrán informarse sobre eventos, talleres, celebraciones y proyectos que fomentan el desarrollo integral de nuestra comunidad. Además, ofrecemos un espacio para compartir logros y experiencias que refuercen la interacción y participación activa entre estudiantes, docentes y la comunidad en general, como miembros de la institución.</strong></p>
@@ -121,8 +121,8 @@
         }
    a.button {
     position: fixed; 
-    top: 20px; 
-    left: -10px; 
+    top: 10px; 
+    left: -30px; 
     padding: 15px 30px;
     background-color: #0984e3;
     color: white;
@@ -143,10 +143,9 @@
         border-radius: 25px; 
         font-size: 16px; 
     }
-}
      
     a.button {
-        content: "Inicio"; /* Este contenido no funcionará en CSS; ajusta en el HTML */
+        content: "Inicio"; 
     }
 	   
         .back-button:hover {
@@ -198,7 +197,6 @@ video {
         height: auto; 
         object-fit: contain; 
     }
-}
 
             .container {
                 display: flex;
@@ -206,7 +204,6 @@ video {
                 align-items: center;
                 padding: 10px;
             }
-        }
 
         .image-gallery {
             display: flex;
@@ -276,27 +273,14 @@ video {
             margin-top: 40px;
         }
       @media (max-width: 600px) {
-    a.button {
+       a.button {
         left: 5%; 
         width: auto; 
         padding: 10px 15px;  
         border-radius: 25px;  
         font-size: 16px;  
-    }
-	      .mobile {
-    display: none; /* Oculta el botón móvil por defecto */
-}
-
-/* Muestra el botón móvil solo en dispositivos pequeños */
-@media (max-width: 600px) {
-    .button {
-        display: none; /* Oculta el botón de escritorio */
-    }
-    .mobile {
-        display: flex; /* Muestra el botón móvil */
-    }
-}
-
+  
+       }
         @media (max-width: 1200px) {
             .activities {
                 padding: 30px;
