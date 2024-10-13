@@ -9,8 +9,6 @@
 <body>
 
 <a href="index" class="button">Volver a página de inicio</a>
-<a href="#" class="button">Volver a página de</a>
-<a href="#" class="button mobile">Inicio</a>
 	
 <h1>Novedades</h1>
 <p class="intro-text"><strong>Esta página está dedicada a mostrar las diversas actividades culturales, sociales y educativas que se llevan a cabo dentro de nuestra institución. Aquí, los usuarios podrán informarse sobre eventos, talleres, celebraciones y proyectos que fomentan el desarrollo integral de nuestra comunidad. Además, ofrecemos un espacio para compartir logros y experiencias que refuercen la interacción y participación activa entre estudiantes, docentes y la comunidad en general, como miembros de la institución.</strong></p>
@@ -122,6 +120,7 @@
             margin-bottom: 20px;
         }
         a.button {
+   a.button {
     position: fixed; 
     top: 20px; 
     left: -5px; 
@@ -137,14 +136,16 @@
     z-index: 1000;
 }
 
+/* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     a.button {
-        left: -20px; 
-        width: auto;  
-        padding: 10px 15px; 
-        border-radius: 25px;  
-        font-size: 16px;  
+        left: 5%; /* Ajustar la posición para que no esté tan al borde */
+        width: auto; /* Cambia el ancho a automático para que se ajuste al contenido */
+        padding: 10px 15px; /* Ajustar el padding si es necesario */
+        border-radius: 25px; /* Cambiar los bordes redondeados si es necesario */
+        font-size: 16px; /* Ajustar el tamaño de la fuente */
     }
+}
      
     a.button {
         content: "Inicio"; /* Este contenido no funcionará en CSS; ajusta en el HTML */
