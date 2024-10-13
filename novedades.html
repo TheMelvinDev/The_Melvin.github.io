@@ -232,14 +232,23 @@
             margin-top: 40px;
         }
 
-        @media (max-width: 600px) {
-            a.button {
-                left: 5%; 
-                width: auto; 
-                padding: 10px 15px;  
-                border-radius: 25px;  
-                font-size: 16px;  
-            }
+       @media (max-width: 768px) {
+       a.button{
+       position: fixed;  
+       bottom: 10px; 
+       left: 10px; 
+        z-index: 1000; 
+        margin: 10px; 
+        background-color: #fff;  
+        border-radius: 5px;  
+       padding: 10px;  
+     }
+
+ 
+  .contenido {
+    margin-bottom: 60px; 
+  }
+} 
 
             .activities {
                 padding: 30px;
