@@ -4,151 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Polivalente Honduras</title>
-    <!-- Puedes usar un framework como Bootstrap para estilos adicionales -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Instituto Polivalente Honduras</h1>
-        <p>Formando el futuro con educación de calidad</p>
+    <header class="header">
+        <h1 class="logo">Instituto Polivalente Honduras</h1>
+        <p class="tagline">Formando el futuro con educación de calidad</p>
     </header>
 
-    <!-- Barra de navegaci�n -->
-    <p style="text-align: center; font-size: 2rem; 
-        color: #ffffff; background-color: #2980b9; padding: 20px; border-radius: 0px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Pagina de pruebas Grupo Numero 2</p>
-
-    <nav>
-        <a href="novedades.html" class="button">Novedades e Información</a>
+    <nav class="navbar">
+        <a href="novedades.html" class="nav-link">Novedades e Información</a>
     </nav>
 
-    <!-- Contenido principal -->
-    <div class="content">
-        <h2>Bienvenidos a nuestro sitio web</h2>
-        <p>En el Instituto Polivalente Honduras, ofrecemos una educaci&oacute;n integral para los grados de séptimo, octavo, y noveno, así como una formación técnica en mecánica, contaduría y finanzas, e informática.</p>
-        <p>Descubre más sobre los grados que atendemos, nuestras carreras, y las novedades de nuestro instituto.</p>
-    </div>
-    
-    <object width="400" height="224">
-    <param name="allowfullscreen" value="true">
-    <param name="allowscriptaccess" value="always">
-    <param name="movie" value="URL_DEL_VIDEO">
-        <section id="ubicacion">
-    <h2>Ubicación del Instituto Polivalente Honduras</h2>
-    <div class="map-container" style="max-width: 800px; margin: 0 auto;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.4453518799696!2d-87.72122279999999!3d13.508238799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ab37facd84163%3A0xeb27e992968ce3ac!2sInstituto%20Polivalente%20%22%20Honduras%20%22%20Alianza%2C%20Valle!5e0!3m2!1ses!2shn!4v1728797459379!5m2!1ses!2shn" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</section>
+    <main class="main-content">
+        <section class="intro">
+            <h2>Bienvenidos a nuestro sitio web</h2>
+            <p>En el Instituto Polivalente Honduras, ofrecemos una educación integral para los grados de séptimo, octavo, y noveno, así como formación técnica en mecánica, contaduría y finanzas, e informática.</p>
+            <p>Descubre más sobre nuestros programas y las novedades de nuestro instituto.</p>
+        </section>
 
-            
-</section>
+        <section id="ubicacion" class="map-section">
+            <h2>Ubicación del Instituto</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.4453518799696!2d-87.72122279999999!3d13.508238799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ab37facd84163%3A0xeb27e992968ce3ac!2sInstituto%20Polivalente%20%22%20Honduras%20%22%20Alianza%2C%20Valle!5e0!3m2!1ses!2shn!4v1728797459379!5m2!1ses!2shn" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
 
-    <!-- Pie de p�gina -->
-    <footer>
-        <p>� 2024 Instituto Polivalente Honduras - Todos los derechos reservados</p>
+    <footer class="footer">
+        <p>© 2024 Instituto Polivalente Honduras - Todos los derechos reservados</p>
     </footer>
-           <style>
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
+   <style>
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-header {
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.header {
     background-color: #2E86C1;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 15px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    animation: fadeIn 2s ease-in-out;
+.logo {
+    font-size: 2rem; 
+    margin-bottom: 5px;
 }
 
-nav {
+.tagline {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.navbar {
     background-color: #1A5276;
+    padding: 10px 0;
     text-align: center;
-    padding: 15px 0;
 }
 
-nav a {
+.nav-link {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-link:hover {
     color: #74b9ff;
-    text-decoration: underline;
 }
 
-.content {
-    max-width: 1000px;
+.main-content {
+    max-width: 900px;
     margin: 40px auto;
     padding: 20px;
     background-color: #ecf0f1;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.intro h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
     color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 2rem;
 }
 
-.content p {
-    font-size: 1.2rem;
+.intro p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
     text-align: justify;
-    color: #555;
 }
 
-footer {
-    background-color: #2c3e50;
-    color: white;
+.map-section {
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-a.button {
-    background-color: #0984e3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+.map-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #2c3e50;
 }
 
-a.button:hover {
-    background-color: #74b9ff;
-    transform: scale(1.1);
-}
 .map-container {
     position: relative;
     overflow: hidden;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;  
     height: 0;
-    width: 100%; 
-    max-width: 800px; 
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -158,39 +138,31 @@ a.button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: none;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-    .content {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
         padding: 15px;
     }
 
-    nav a {
+    .nav-link {
         display: block;
         margin: 10px 0;
     }
 }
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .content p {
-        font-size: 1rem;
-    }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-     </style>
+</style>
 </body>
 </html>
