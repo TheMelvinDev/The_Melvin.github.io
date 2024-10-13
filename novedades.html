@@ -178,16 +178,14 @@
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    cursor: pointer; 
 }
 
-/* Animación al pasar el cursor */
 .image-gallery img:hover {
-    transform: scale(1.05); /* Aumenta ligeramente la imagen */
-    opacity: 0.8; /* Reduce un poco la opacidad */
+    transform: scale(1.05); 
+    opacity: 0.8;  
 }
 
-/* Estilo del modal */
 .modal {
     display: none;
     position: fixed;
@@ -200,7 +198,6 @@
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Contenido del modal */
 .modal-content {
     margin: auto;
     display: block;
@@ -210,7 +207,6 @@
     border-radius: 10px;
 }
 
-/* Texto debajo de la imagen en el modal */
 .modal-text {
     text-align: center;
     color: white;
@@ -219,10 +215,9 @@
     animation: fadeIn 1s ease;
 }
 
-/* Botón para cerrar el modal */
 .close {
     position: absolute;
-    top: 15px;
+    top: px;
     right: 35px;
     color: #fff;
     font-size: 70px;
@@ -318,28 +313,24 @@
     </style>
 
 <script>
-      // Variables del modal
 var modal = document.getElementById('myModal');
 var modalImg = document.getElementById('imgModal');
 var modalText = document.getElementById('imgText');
 var images = document.querySelectorAll('.image-gallery img');
 var span = document.getElementsByClassName('close')[0];
 
-// Cuando se hace clic en una imagen
 images.forEach(function(img) {
     img.onclick = function() {
         modal.style.display = 'block';
         modalImg.src = this.src;
-        modalText.textContent = this.getAttribute('data-text'); // Muestra el texto
+        modalText.textContent = this.getAttribute('data-text'); 
     }
 });
 
-// Cierra el modal al hacer clic en la 'X'
 span.onclick = function() {
     modal.style.display = 'none';
 }
 
-// Cierra el modal al hacer clic fuera de la imagen
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = 'none';
