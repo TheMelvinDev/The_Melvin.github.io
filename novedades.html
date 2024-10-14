@@ -85,15 +85,35 @@
         }
 
         .intro-text {
-            text-align: Left;
-              padding: 20px;
-            max-width: 900px;
-                margin: 0 auto;
-            font-size: 1.3rem;
-             color: #555;
-            animation: slideIn 2s ease-out;
-        }
+    text-align: justify;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: #555;
+    animation: slideIn 2s ease-out;
+}
 
+@media only screen and (max-width: 600px) {
+    .intro-text {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .intro-text {
+        padding: 18px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .intro-text {
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+}
         .activities {
             padding: 50px 20px;
             background-color: #ecf0f1;
@@ -302,6 +322,7 @@
             .activities {
                 padding: 10px;
             }
+	}
 
             h1 {
                 font-size: 1.8rem;
