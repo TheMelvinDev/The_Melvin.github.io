@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto IPH</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <style>
+        .columna-izquierda h2 {
+            font-size: 50px;
+            margin-bottom: 35px;
+        }
+
+        .columna-izquierda p {
+            font-size: 20px;
+        }
+		
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #FFF;
+    padding: 20px;
+    color: #333;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: none;
+}
+
+.main-content-img {
+    margin-left: 300px;
+}
+
+.main-content {
+    margin-left: 350px;
+    padding: 20px;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+}
+
+.header h1, .header h3 {
+    margin: 0; 
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFF;
+}
+
+.header h1 {
+    top: 30%; 
+    font-size: 50px;
+}
+
+.header h3 {
+    top: 70%; 
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.content-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.columna-izquierda, .columna-derecha {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+}
+
+.columna-izquierda {
+    background-color: #FFF;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navegación</h2>
+        <ul>
+        <li><a href="index.html">Pagina Principal</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="carreras.html">Carreras</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="content-columns">
+            <div class="columna-izquierda">
+                <h2>Sobre nosotros</h2>
+                <p>El Instituto Polivalente Honduras es un centro educativo comprometido con la formación integral de los estudiantes, brindando una educación de calidad en un entorno seguro y cercano a sus comunidades. Con una amplia oferta académica que incluye carreras presenciales y a distancia, nos esforzamos por ofrecer opciones educativas accesibles y adecuadas a las necesidades de nuestros estudiantes. Nuestro objetivo es preparar a jóvenes para enfrentar los desafíos del mundo actual y convertirse en líderes y agentes de cambio en sus comunidades y en el país.</p>
+            </div>
+            <div class="columna-derecha">
+                <img src="https://th.bing.com/th/id/OIP.ZyPyIsj1BhqxPhaPL-1LFgHaHa?rs=1&pid=ImgDetMain" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
