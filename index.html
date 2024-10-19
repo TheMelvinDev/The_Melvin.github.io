@@ -8,14 +8,14 @@
 </head>
 <body>
    <header class="header">
-        <img src="Imagenes/Logo Hd iph.jpg" class="left-image" alt="Imagen izquierda">
-        <div class="header-content">
-            <div class="stars">☆☆★☆☆</div>
-            <h1 class="logo">Instituto Polivalente Honduras</h1>
-            <p class="tagline">Formando el futuro con educación de calidad</p>
-        </div>
-        <img src="ImagenesLogo Hd iph.jpg" class="right-image" alt="Imagen derecha">
-    </header>
+    <img src="Imagenes/Logo Hd iph.jpg" class="left-image" alt="Imagen izquierda">
+    <div class="header-content">
+        <div class="stars">☆☆★☆☆</div>
+        <h1 class="logo">Instituto Polivalente Honduras</h1>
+        <p class="tagline">Formando el futuro con educación de calidad</p>
+    </div>
+    <img src="Imagenes/Logo Hd iph.jpg" class="right-image" alt="Imagen derecha">
+</header>
 
     <nav class="navbar">
         <a href="grados.html" class="nav-link">Grados</a>
@@ -61,29 +61,50 @@ body {
 
 .header {
     background-color: #2E86C1;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
+    color: white;
+    padding: 30px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    text-align: center;
+    flex: 1;  
+}
+
+.left-image, .right-image {
+    width: 60px;  
+    height: auto;
 }
 
 .logo {
-      font-size: 2rem; 
-      margin-bottom: 5px;
+    font-size: 2rem;
+    margin-bottom: 5px;
 }
-     .stars {
-        text-align: center;
-        font-size: 24px;
-        margin: 10px 0;
-        color: gold;
-        font-weight: bold;
+
+.stars {
+    font-size: 24px;
+    margin: 10px 0;
+    color: gold;
+    font-weight: bold;
 }
 
 .tagline {
-      font-size: 1rem;
-      font-weight: 300;
+    font-size: 1rem;
+    font-weight: 300;
     opacity: 0.8;
-} 
+}
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;  
+    }
+
+    .left-image, .right-image {
+        display: none;  
+    }
+}
 .navbar {
     background-color: #2E86C1;
     padding: 15px 0;
